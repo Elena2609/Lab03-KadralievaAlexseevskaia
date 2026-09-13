@@ -163,3 +163,27 @@ Console.WriteLine($"Значение c после вывода: {c}");
 int d = 10;
 Console.WriteLine($"№3 (вывод ++d): {++d} "); // d = 11, и выводится 11
 Console.WriteLine($"Значение d после вывода: {d}");
+
+Console.WriteLine();
+Console.WriteLine("Калькулятор скидки с несколькими условиями ");
+
+Console.Write("Введите сумму покупки: ");
+double sum = double.Parse(Console.ReadLine());
+
+Console.Write("Есть ли карта постоянного клиента? (1-да, 0-нет): ");
+int hasCardInput = int.Parse(Console.ReadLine());
+bool hascard = (hasCardInput == 1);
+
+Console.Write("Введите количество товаров в чеке: ");
+int count = int.Parse(Console.ReadLine());
+
+bool ispurchaseAmount = (sum >= 3000);
+bool isgoods = (count >= 3);
+
+bool eligibleForDiscount = (ispurchaseAmount && isgoods) || hascard;
+
+Console.WriteLine($"Сумма покупки >= 3000: {ispurchaseAmount} (Сумма: {sum})");
+Console.WriteLine($"Есть ли карта постоянного клиента: {hascard}");
+Console.WriteLine($"Товаров в чеке >= 3: {isgoods} (Количество товаров в чеке: {count})");
+Console.WriteLine();
+Console.WriteLine($"Итоговая скидка положена?: {eligibleForDiscount}");
