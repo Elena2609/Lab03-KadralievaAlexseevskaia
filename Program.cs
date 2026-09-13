@@ -137,4 +137,29 @@ bool isEven = (number % 2 == 0);
 
 Console.WriteLine($"Число четное? { isEven}");
 
+Console.WriteLine();
+Console.WriteLine("Инкремент в выражении");
 
+int x1 = 10;
+int y1 = x1++; //сначала y1 = 10(текущее значение x1), после x1 увеличивается до 11
+Console.WriteLine($"№1 (x++): x = {x1}, y = {y1}");
+
+int x2 = 10;
+int y2 = ++x2; //сначала x2 увеличивается до 11, после y2 = 11
+Console.WriteLine($"№1 (++x): x = {x2}, y = {y2}");
+
+int a = 10;
+int result1 = a++ + 5; //result1 = 10 + 5 = 15, после a равно 11
+Console.WriteLine($"№2 (a++ + 5): a = {a}, result1 = {result1}");
+
+int b = 10;
+int result2 = ++b + 5; // b = 11, а после result2 = 11 + 5 = 16
+Console.WriteLine($"№2 (++a + 5): b = {b}, result2 = {result2}");
+
+int c = 10;
+Console.WriteLine($"№3 (вывод c++): {c++} "); // Сначала выводится 10, затем c станвится 11
+Console.WriteLine($"Значение c после вывода: {c}");
+
+int d = 10;
+Console.WriteLine($"№3 (вывод ++d): {++d} "); // d = 11, и выводится 11
+Console.WriteLine($"Значение d после вывода: {d}");
