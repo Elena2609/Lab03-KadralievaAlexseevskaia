@@ -129,6 +129,12 @@ Console.WriteLine($"Проходит по правилам: {isEligibleByRules}"
 Console.WriteLine($"Итоговый балл: {totalScore}");
 
 
+Console.WriteLine();
+Console.WriteLine("Введите целое число: ");
+int number = int.Parse(Console.ReadLine());
 
+bool isEven = (number % 2 == 0);
+
+Console.WriteLine($"Число четное? { isEven}");
 
 
